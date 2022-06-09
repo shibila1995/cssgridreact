@@ -21,9 +21,9 @@
     grid-template-columns:1fr 1fr 1.2fr ;
     grid-template-rows:   1fr 4fr 1.2fr 1.2fr;
 
-    grid-template-areas: "logo    logo    header"
-                          "main   main    imgbox"
-                          "quotes quotes  imgbox"
+    grid-template-areas:  "logo    logo    header"
+                          "main    main    imgbox"
+                          "quotes  quotes  imgbox"
                           "btn1    btn2   imgbox";
 }
 
@@ -81,7 +81,7 @@ align-items: center;
   font-weight: 700;
   
 }
-header{
+.header{
   grid-area: header;
   background-color: rgb(134, 197, 134);
   display: flex;

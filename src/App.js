@@ -10,10 +10,11 @@ export default function App() {
     return (
         <div className="container">
             <Navbar />
+            <Header/>
             <Main />
             <Quotes/>
             <ButtonText/>
-            <Header/>
+            
             <ImageBox/>
         </div>
     )
