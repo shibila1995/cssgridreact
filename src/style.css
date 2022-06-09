@@ -1,178 +1,166 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-  }
-  
-  body{
-    -webkit-font-smoothing:acntialiased;
-    font-family: "Raleway-regular";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: acntialiased;
+  font-family: "Raleway-regular";
   font-size: 16px;
   list-style: 28px;
-  }
-  a{
-    text-decoration: none;
-  }
-.container{
-    max-width: 1200px;
-    margin: 50px auto;
-    height: 100vh;
-    display: grid;
-    grid-template-columns:1fr 1fr 1.2fr ;
-    grid-template-rows:   1fr 4fr 1.2fr 1.2fr;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  grid-template-rows: 1fr 4fr 1.2fr 1.2fr;
 
-    grid-template-areas:  "logo    logo    header"
-                          "main    main    imgbox"
-                          "quotes  quotes  imgbox"
-                          "btn1    btn2   imgbox";
+  grid-template-areas:
+    "logo    logo    header"
+    "main    main    imgbox"
+    "quotes  quotes  imgbox"
+    "btn1  btn2   imgbox";
 }
 
-.logo{
+.logo {
   grid-area: logo;
   background-color: rgb(11, 80, 11);
-  padding: 20px;
+
   display: flex;
   align-items: center;
-  
 }
-.logo a{
-  font-size: 25px;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
+.logo img {
+  width: 60px;
 }
-.main
-{
+.main {
   grid-area: main;
   background-color: rgb(134, 197, 134);
 
-padding: 125px;
+  padding: 125px;
   display: flex;
-justify-content: center;
-flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.main h1{
+.main h1 {
   font-size: 36px;
   line-height: 49px;
   font-weight: 700;
   margin-bottom: 30px;
-  
- 
 }
 
-.img-box{
+.img-box {
   grid-area: imgbox;
- overflow: hidden;
-background-size: cover;
+  overflow: hidden;
+  background-size: cover;
 }
 
-.quotes{
-grid-area: quotes;
-background-color: beige;
-padding-left: 105px;
-display: flex;
-align-items: center;
+.quotes {
+  grid-area: quotes;
+  background-color: beige;
+  padding-left: 105px;
+  display: flex;
+  align-items: center;
 }
-.quotes-h2{
- 
+.quotes-h2 {
   font-size: 26px;
   line-height: 30px;
   font-weight: 700;
-  
 }
-.header{
+.header {
   grid-area: header;
   background-color: rgb(134, 197, 134);
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-header ul{
+.header ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-
 }
-header ul li a{
+.header ul li a {
   padding: 30px 15px;
   font-weight: 700;
+  font-size: 20px;
   color: black;
 }
-.btn a {
-color: white;
-font-size: 24px;
-font-weight: 700;
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.btn1{
+.btn1 {
   grid-area: btn1;
   background-color: rgb(11, 80, 11);
 }
-.btn2{
+.btn a {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn2 {
   grid-area: btn2;
   background-color: rgb(83, 170, 83);
 }
 
-
 /*media query starts here*/
-@media(max-width:767px) {
-  
-  .container{
+@media (max-width: 767px) {
+  .container {
     height: auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:  "logo logo"
-                          "header header"
-                          "imgbox imgbox"
-                          "main main"
-                          "quotes quotes"
-                          "btn1 btn2"
-    ;
+    grid-template-areas:
+      "logo logo"
+      "header header"
+      "imgbox imgbox"
+      "main main"
+      "quotes quotes"
+      "btn1 btn2";
     grid-template-rows: 100px 50px 25vh auto auto 70px;
-
   }
-  .logo{
+  .logo {
     padding-left: 0;
     justify-content: center;
   }
-  .main{
-    padding:10px;
+  .main {
+    padding: 10px;
     justify-content: center;
-
   }
-  .main h1{
+  .main h1 {
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
     margin-bottom: 12px;
   }
-  .quotes{
+  .quotes {
     padding: 20px 10px;
   }
-  .quotes h2{
+  .quotes h2 {
     font-size: 15px;
     line-height: 28px;
   }
-  .btn a{
+  .btn a {
     font-size: 18px;
   }
-  header{
-padding-right: 0 ;
-justify-content: center;
+  header {
+    padding-right: 0;
+    justify-content: center;
+  }
 }
+
+@media (min-width: 768) and (max-width: 950px) {
+  .logo,
+  .main,
+  .quotes {
+    padding-left: 25px;
   }
-
-  @media (min-width:768) and (max-width:950px){
-.logo,.main,.quotes{
-  padding-left: 25px;
-}    
-  }
-
-
-
+}
